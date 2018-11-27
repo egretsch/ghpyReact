@@ -1,0 +1,24 @@
+@media all and (min-width: 480px) {
+  .gihpySearch {
+    padding: 60px 0;
+  }
+
+  .gihpySearch form {
+    margin: 0 auto;
+    max-width: 30%;
+    
+  }
+  .gihpyButtion{
+      max-width: 50%;
+      
+  }
+}
+
+.text {
+    font-weight: bold;
+    font-size: 200%;
+}
+
+.giphyPic {
+    padding: 5px;
+}
