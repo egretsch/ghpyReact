@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import API from "../../utils/API";
 import { Button, FormGroup, FormControl } from "react-bootstrap";
 import './Searchbar.css'
+// component to show images on page
 import DisplayImages from '../DisplayImages';  
 
 class Login extends Component {
@@ -36,19 +37,20 @@ class Login extends Component {
 
     
     // CLEAR Search
-    clearLoginState() {
+    clearSearchState() {
         this.setState({
             gihpySearch: ""
         });
     }
 
-    // handle Login Submit
+    // handle Search Submit
     handleGihpySearchSubmit(event) {
         event.preventDefault();
         const gihpySearchObj = {
             term: this.state.gihpySearch
         }
         console.log(gihpySearchObj);
+//         gives asccess to server paths
         API.getGihpy(
                 gihpySearchObj
             )
@@ -61,10 +63,10 @@ class Login extends Component {
                     console.log(err)
                     
                 });
-        this.clearLoginState()
+        this.clearSearchState()
     }
    
-
+// renders giphys to page and diplays Searchbar
     render() {
         console.log(this.state.items)
         return (
